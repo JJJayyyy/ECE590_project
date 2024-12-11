@@ -22,21 +22,8 @@ This project is best built using a [Docker](https://hub.docker.com) container to
    This option clones the repository and all its submodules:
 
       ```bash
-      git clone --recursive https://github.com/JJJayyyy/Qplacer.git
+      git clone --recursive https://github.com/JJJayyyy/ECE590_project.git
       cd Qplacer
-      ```
-
-   - **Selective Submodule Clone:** 
-   This option only clones the necessary submodule of the project, which can save time and disk space:
-
-      ```bash
-      git clone https://github.com/JJJayyyy/Qplacer.git
-      cd Qplacer
-
-      git submodule init thirdparty/cub
-      git submodule init thirdparty/pybind11
-      git submodule init thirdparty/Limbo_qplacer_backup/limbo/thirdparty/OpenBLAS
-      git submodule update
       ```
 
 4. **Build the Docker Image:** Use the following command to build the Docker image, you can replace `jz420` with your name:
@@ -73,28 +60,12 @@ Navigate to the `qplacer` directory to start the build process. Execute the `com
     ```
     Where `build` is the directory where to compile the code, and `qplacer/operators` is the directory where to install operators.
 
-    - **Conditional Build Option:** If all submodules have been cloned, there is a option to use the latest operators from `DreamPlace` by executing the following command:
-
-        ```bash
-        ./compile.sh OFF
-        ```
-
-    ***Warning:*** *Using the latest operators may lead to compatibility issues if there are changes that are not compatible with the current state of `Qplacer`*.
-
     `build` directory can be removed after installation if you do not need incremental compilation later. To clean, go to the root directory.
 
     ```
     rm -r build
     ```
     
-
-
-
-
-## Get Benchmarks
-
-To get quantum topology benchmarks, please refer the `qplacer/qplacer_example.ipynb`. The benchmark files and placement configuration files will be saved in directory `qplacer/benchmark` and `qplacer/test`, respectively
-
 
 ## Run Example
 
