@@ -1,31 +1,8 @@
-<h1><p align="center"> Qplacer: Deep learning toolkit-enable Superconducting Physical Qubit Placement </p></h2>
+<h1><p align="center"> PackGen: A Packaging Scene Generator for Robot Learning </p></h2>
 
 
 #### What it is doing
-An efficient tool leveraging deep learning techniques to optimize nonlinear superconducting physical qubit layouts. Developed based on [Dreamplace](https://github.com/limbo018/DREAMPlace) with flexible deep learning toolkits, it runs on both CPUs and GPUs for versatile deployment.
-
-#### Who will benefit
-Researchers on quantum hardware device design, quantum device manufacture, and quantum design automation.
-
-#### Reference Flow
-<p align="center">
-    <img src="images/overview.png" width="100%">
-</p>
-
-#### Sample Result
-<p align="center">
-    <img src="images/demo.gif" width="25%">
-    <!-- <img src="images/eagle.png" width="68%"> -->
-    <img src="images/falcon.png" width="44%">
-</p>
-
-
-## Publications
-
-- Junyao Zhang, Hanrui Wang, Qi Ding, Jiaqi Gu, Reouven Assouly, William D Oliver, Song Han, Kenneth R Brown, Hai Li, Yiran Chen,
-  "**Qplacer: Frequency-Aware Component Placement for Superconducting Quantum Computers**",
-  arxiv, 2023
-  ([preprint](https://arxiv.org/abs/2401.17450))
+An simulation scene generator leveraging deep learning techniques for robot learning. Developed based on [Dreamplace](https://github.com/limbo018/DREAMPlace) with flexible deep learning toolkits, it runs on both CPUs and GPUs for versatile deployment.
 
 
 ## Installation
@@ -119,28 +96,16 @@ Navigate to the `qplacer` directory to start the build process. Execute the `com
 To get quantum topology benchmarks, please refer the `qplacer/qplacer_example.ipynb`. The benchmark files and placement configuration files will be saved in directory `qplacer/benchmark` and `qplacer/test`, respectively
 
 
-## Run Placer
+## Run Example
 
 Before running, make sure the **benchmarks** have been created and the python dependency packages/operators have been installed/built successfully.
 
 Navigate to directory `qplacer` and run `qplacer_engine/Placer.py` with `json` configuration file for full placement.
 
 ```
-python qplacer_engine/Placer.py test/grid-25/wp_wf/grid-25_wp_wf.json
+python qplacer_engine/Placer.py test/grid-25/wp_wf_03/grid-25_wp_wf_03.json
 ```
 
 ## Contact
 Junyao Zhang [Email](mailto:jz420@duke.edu), [Github issue](https://github.com/JJJayyyy/Qplacer/issues)
 
-
-## Citation
-```
-@misc{zhang2024qplacer,
-      title={Qplacer: Frequency-Aware Component Placement for Superconducting Quantum Computers}, 
-      author={Junyao Zhang and Hanrui Wang and Qi Ding and Jiaqi Gu and Reouven Assouly and William D. Oliver and Song Han and Kenneth R. Brown and Hai "Helen" Li and Yiran Chen},
-      year={2024},
-      eprint={2401.17450},
-      archivePrefix={arXiv},
-      primaryClass={quant-ph}
-}
-```
